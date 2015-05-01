@@ -32,4 +32,13 @@ class Word
     end
     found_word
   end
+
+  define_method(:add_definition) do |definition|
+    @definition.push(definition)
+  end
+
+  define_method(:see_definition) do
+    @definition
+  end
+
 end
