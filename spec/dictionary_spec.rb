@@ -43,8 +43,9 @@ describe('Word') do
   describe("#add_definition") do
     it('adds a new definition for a word') do
     test_word = Word.new
-    test_word.add_definition("this is the definition")
-    expect(test_word.see_definition).to(eq(["this is the definition"]))
+    test_definition = Definition.new
+    test_word.add_definition(test_definition)
+    expect(test_word.see_definition).to(eq([test_definition]))
   end
 end
 
