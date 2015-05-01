@@ -18,4 +18,8 @@ class Word
   define_singleton_method(:clear) do
     @@words = []
   end
+
+  define_method(:id) do
+    @word
+  end
 end

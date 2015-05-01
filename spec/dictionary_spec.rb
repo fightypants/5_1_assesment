@@ -21,4 +21,13 @@ describe('Word') do
       expect(Word.all()).to(eq([]))
     end
   end
+
+  describe('#id') do
+    it('returns the id value for a word') do
+      test_word = Word.new
+      test_word.store()
+      expect(test_word.id).to(eq(1))
+    end
+  end
+
 end
