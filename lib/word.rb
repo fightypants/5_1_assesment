@@ -3,7 +3,7 @@ class Word
 
 
   define_method(:initialize) do
-    @definition = []
+    @word_definitions = []
     @word = @@words.length().+(1)
   end
 
@@ -34,11 +34,11 @@ class Word
   end
 
   define_method(:add_definition) do |definition|
-    @definition.push(definition)
+    @word_definitions.push(definition)
   end
 
   define_method(:see_definition) do
-    @definition
+    @word_definitions
   end
 
 end

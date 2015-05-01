@@ -2,7 +2,7 @@ require ('definition')
 require ('word')
 require ('rspec')
 
-
+########SPECS FOR WORD CLASS OBJECTS###########
 describe('Word') do
   before do
     Word.clear
@@ -46,9 +46,19 @@ describe('Word') do
     test_definition = Definition.new
     test_word.add_definition(test_definition)
     expect(test_word.see_definition).to(eq([test_definition]))
+    end
   end
 end
 
+###########SPECS FOR DEFINITION CLASS OBJECTS#################
+describe('Definition') do
 
 
+  describe("#store_definition") do
+    it("adds definition into the definition array") do
+      test_definition = Definition.new
+      test_definition.store_definition("This is the text users will see")
+      expect(test_definition.show_definition()).to(eq(["This is the text users will see"]))
+    end
+  end
 end
