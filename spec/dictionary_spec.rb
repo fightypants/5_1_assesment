@@ -30,4 +30,15 @@ describe('Word') do
     end
   end
 
+  describe(".find_by_id") do
+    it("returns a word by its id number") do
+      test_word = Word.new
+      test_word.store()
+      test_word2 = Word.new
+      test_word2.store()
+      expect(Word.find_by_id(test_word.id())).to(eq(test_word))
+    end
+  end
+
+
 end
