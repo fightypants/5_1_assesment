@@ -1,0 +1,11 @@
+<h1>Your Personal Dictionary</h1>
+<h2>Words</h2>
+  <ul>
+    <% @words.each() do |word| %>
+    <li><a href="/new_definition/<%= word.id() %>"></a></li>
+<% end %>
+  </ul>
+<p><a href="/new_word">Add a new word</a></p>
+
+
+##should have logic here to list out the saved words
